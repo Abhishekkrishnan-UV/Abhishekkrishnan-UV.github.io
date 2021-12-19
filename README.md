@@ -120,7 +120,7 @@ digitalWrite(redled, LOW);// turn off red LED
 
 ## #Circuit Diagram.
 
-
+![circuit diagram 3](https://user-images.githubusercontent.com/86780435/146665615-e7b274db-d50d-4f7c-8dde-94124480e44b.png)
 
 
 ### The Code.
