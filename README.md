@@ -18,7 +18,7 @@ Hi folks! I’m Abhishek krishnan U V , Computer Science Engineering student fro
 ##### -> Jumper Wires (Male to Male ) X 2 Nos.
 
 ### Circuit Diagram.
-![](https://user-images.githubusercontent.com/86780435/146665575-00e87a05-0644-42f9-8d55-d888a1b14409.png)
+![Circuit diagram](https://user-images.githubusercontent.com/86780435/146665575-00e87a05-0644-42f9-8d55-d888a1b14409.png)
 
 ### The Code.
 
@@ -64,7 +64,7 @@ delay(1000); // wait for a second
 
 ### Circuit Diagram.
 
-![](https://user-images.githubusercontent.com/86780435/146665599-cee2cbcf-75a3-4d4a-9585-c4a91c787144.png)
+![Circuit diagram](https://user-images.githubusercontent.com/86780435/146665599-cee2cbcf-75a3-4d4a-9585-c4a91c787144.png)
 
 
 ### The Code.
@@ -123,7 +123,7 @@ digitalWrite(redled, LOW);// turn off red LED
 
 ## #Circuit Diagram.
 
-![circuit diagram 3](https://user-images.githubusercontent.com/86780435/146665615-e7b274db-d50d-4f7c-8dde-94124480e44b.png)
+![circuit diagram](https://user-images.githubusercontent.com/86780435/146665615-e7b274db-d50d-4f7c-8dde-94124480e44b.png)
 
 
 ### The Code.
