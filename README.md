@@ -44,7 +44,7 @@ delay(1000); // wait for a second
 ### Output Video.
 
 
-![Output Video](https://user-images.githubusercontent.com/86780435/146666128-7731c85d-0247-4b18-9844-1ccd7cf6c299.mp4)
+![Output Video](https://user-images.githubusercontent.com/86780435/146666882-c4fa0ac9-71b0-4555-9dce-946b33f04679.mp4)
 
 
 
@@ -107,7 +107,7 @@ digitalWrite(redled, LOW);// turn off red LED
 ### Output Video.
 
 
-![Output Video](https://user-images.githubusercontent.com/86780435/146666264-2b97209e-2900-4544-9b3c-98ec40e4956b.mp4)
+![Output Video](https://user-images.githubusercontent.com/86780435/146666904-195dbecc-7534-407e-91df-aa085b85cb80.mp4)
 ## Experiment 3 : LED Chasing Effect.
 
 => We often see billboards composed of colorful LEDs. They are constantly changing to form various light effects. In this experiment, we compile a program to simulate LED chasing effect. The long lead of LED is the positive side, short lead is negative.
@@ -157,4 +157,4 @@ void loop()
 Successfully made the LED chase.
 
 ### Output Video.
-![Output Video](https://user-images.githubusercontent.com/86780435/146666179-4936ec5f-e1ae-4977-b7ac-16906c7cf039.mp4)
+![Output Video](https://user-images.githubusercontent.com/86780435/146666923-e93c43e9-1c18-448f-a20e-49e67ed208a0.mp4)
