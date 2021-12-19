@@ -61,6 +61,7 @@ delay(1000); // wait for a second
 
 ### Circuit Diagram.
 
+![](https://user-images.githubusercontent.com/86780435/146665599-cee2cbcf-75a3-4d4a-9585-c4a91c787144.png)
 
 
 ### The Code.
