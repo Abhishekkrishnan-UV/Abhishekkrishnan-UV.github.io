@@ -18,7 +18,7 @@ Hi folks! I’m Abhishek krishnan U V , Computer Science Engineering student fro
 ##### -> Jumper Wires (Male to Male ) X 2 Nos.
 
 ### Circuit Diagram.
-
+![](https://user-images.githubusercontent.com/86780435/146665575-00e87a05-0644-42f9-8d55-d888a1b14409.png)
 
 ### The Code.
 
