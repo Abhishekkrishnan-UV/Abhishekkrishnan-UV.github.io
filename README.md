@@ -415,9 +415,6 @@ Serial.println(ldrStatus);
 
 ## Circuit Diagrams
 
-![1636554036921 1](https://user-images.githubusercontent.com/91405741/141130577-55ec7164-a222-4dac-8e57-ada3298bb18e.jpg)
-
-
    ## Code
 
 ```
