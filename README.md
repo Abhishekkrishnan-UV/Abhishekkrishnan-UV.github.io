@@ -366,6 +366,7 @@ for(val=0; val<255; val++)
  Serial.println(val, DEC);
 }
 
+```
 ### Output video.
 
 
@@ -380,7 +381,63 @@ Successfully blinked the RGB LED.
 
 
 
+## Experiment 7 - LDR Light Sensor
+### * LDR : Light Dependent Sensor
+=> An experiment to understand the working of an LDR light Sensor.
 
+
+
+-> Photo Resistor (Photovaristor) is a resistor whose resistance varies from different incident light strength. It's based on the photoelectric effect of semiconductor. If the incident light is intense, its resistance reduces; if the incident light is weak, the resistance increases.
+
+
+
+### Components Required
+
+#### -> Arduino Uno Board
+#### -> Photo Resistor*1
+#### -> Red M5 LED*1
+#### -> 10KΩ Resistor*1
+#### -> 220Ω Resistor*1
+#### -> Breadboard*1
+#### -> Breadboard Jumper Wire*7
+#### -> USB cable*1
+
+### Circuit Diagrams
+
+
+
+
+
+
+
+## Code
+
+```
+
+const int ledPin = 13;
+const int ldrPin = A0;
+void setup() {
+Serial.begin(9600);
+pinMode(ledPin, OUTPUT);
+pinMode(ldrPin, INPUT);
+}
+
+void loop() {
+int ldrStatus = analogRead(ldrPin);
+if (ldrStatus <= 200) {
+digitalWrite(ledPin, HIGH);
+Serial.print("Its DARK, Turn on the LED : ");
+Serial.println(ldrStatus);
+} else {
+digitalWrite(ledPin, LOW);
+Serial.print("Its BRIGHT, Turn off the LED : ");
+Serial.println(ldrStatus);
+}
+}
+
+```
+
+## Output
 
 
 
