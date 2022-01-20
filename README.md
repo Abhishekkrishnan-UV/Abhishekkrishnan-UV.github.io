@@ -262,6 +262,17 @@ Successfully light the LED using a Push Button.
 #### -> Breadboard*1
 #### -> Breadboard Jumper Wire*2
 #### -> USB cable*1
+### Circuit Diagrams.
+
+
+![circuit diagram 5 1](https://user-images.githubusercontent.com/86780435/150277393-50ca1028-8ce0-4939-a7e6-fbdbf45c5e7d.png)
+
+
+
+
+![circuit diagram 5 2](https://user-images.githubusercontent.com/86780435/150277401-4590daa8-9c11-4a3a-b37d-d61c0ca4cd42.png)
+
+
 
 
 ## Code
@@ -282,7 +293,11 @@ digitalWrite(buzzer, HIGH); // produce sound
 
 ### Output video.
 
-> The Buzzer makes beep sound.
+
+
+
+
+
 
 ### Result.
 Successfully made the Buzzer makes beep sound.
