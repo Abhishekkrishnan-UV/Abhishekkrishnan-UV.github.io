@@ -277,7 +277,7 @@ Successfully light the LED using a Push Button.
 
 ## Code
 
-
+```
 
 int buzzer=8;// initialize digital IO pin that controls the buzzer
 void setup() 
@@ -289,7 +289,7 @@ void loop()
 digitalWrite(buzzer, HIGH); // produce sound
 }
 
-
+```
 
 ### Output video.
 
@@ -312,7 +312,7 @@ Successfully made the Buzzer makes beep sound.
 
 => An experiment to understand the working of a RGB LED.
 
-## Components Required
+### Components Required
 
 #### -> Arduino Uno
 #### -> USB Cable * 1
@@ -320,7 +320,7 @@ Successfully made the Buzzer makes beep sound.
 #### -> Resistor *3
 #### -> Breadboard jumper wire*5
 
-## Circuit Diagrams
+### Circuit Diagrams
 
 ![circuit diagram 6 1](https://user-images.githubusercontent.com/86780435/150277992-330854f9-00e2-4a83-b99e-53a1265bd3d8.png)
 
@@ -331,7 +331,7 @@ Successfully made the Buzzer makes beep sound.
 
 
 
-## Code
+### Code
 
 ```
 
@@ -364,12 +364,17 @@ for(val=0; val<255; val++)
  Serial.println(val, DEC);
 }
 
+```
+
+### Output video.
 
 
-## Output
 
-> The RGB LED blinks.
 
+
+
+### Result.
+Successfully blinked the RGB LED.
 
 
 
