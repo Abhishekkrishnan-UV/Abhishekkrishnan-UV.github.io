@@ -45,9 +45,6 @@ delay(1000); // wait for a second
 }
 ```
 
-### Result.
-
-=> Successfully blinked the LED in equal intervals of time.
 
 ### Output Video.
 
