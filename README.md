@@ -122,7 +122,7 @@ digitalWrite(redled, LOW);// turn off red LED
 
 ### Result.
 
-=> Like in the Traffic light scenerio successfully blinked the 3 LED's. The green LED stays on for about 5 second then turnsoff ,Now the yellow LED blinks 3 times with a time interval of 0.5 second , Then the red LED stays on for 5 seconds and goeson
+=> Like in the Traffic light scenerio successfully blinked the 3 LED's.
 
 
 ## Experiment 3 : LED Chasing Effect.
