@@ -217,7 +217,7 @@ Successfully made the LED chase.
 
 ### Code
 
-
+```
 
 int ledpin=11;// initialize pin 11
 int inpin=7;// initialize pin 7
@@ -235,6 +235,8 @@ if(val==LOW)// check if the button is pressed, if yes, turn on the LED
 else
 { digitalWrite(ledpin,HIGH);}
 }
+
+```
 
 ### Output video.
 
