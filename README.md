@@ -184,18 +184,18 @@ Successfully made the LED chase.
 
 ## Experiment 4: Button Controlled LED
 
-> An experiment to light an LED using a Push Button.
+=> An experiment to light an LED using a Push Button.
 
 ### Components Required 
 
-##### Arduino Uno
-##### Button switch*1
-##### Red M5 LED*1
-##### 220ΩResistor*1
-##### 10KΩ Resistor*1
-##### Breadboard*1
-##### Breadboard Jumper Wire*6
-##### USB cable*1
+##### -> Arduino Uno
+##### -> Button switch*1
+##### -> Red M5 LED*1
+##### -> 220ΩResistor*1
+##### -> 10KΩ Resistor*1
+##### -> Breadboard*1
+##### -> Breadboard Jumper Wire*6
+##### -> USB cable*1
 
 ### Circuit Diagrams
 
@@ -250,6 +250,42 @@ Successfully light the LED using a Push Button.
 
 
 
+
+## Experiment 5 : Buzzer
+
+=> An experiment to understand the working of a buzzer.
+
+### Components Required
+
+#### -> Arduino Uno
+#### -> Buzzer*1
+#### -> Breadboard*1
+#### -> Breadboard Jumper Wire*2
+#### -> USB cable*1
+
+
+## Code
+
+
+
+int buzzer=8;// initialize digital IO pin that controls the buzzer
+void setup() 
+{ 
+  pinMode(buzzer,OUTPUT);// set pin mode as “output”
+} 
+void loop() 
+{
+digitalWrite(buzzer, HIGH); // produce sound
+}
+
+
+
+### Output video.
+
+> The Buzzer makes beep sound.
+
+### Result.
+Successfully made the Buzzer makes beep sound.
 
 
 
