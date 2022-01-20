@@ -308,6 +308,120 @@ Successfully made the Buzzer makes beep sound.
 
 
 
+## Experiment 6 : RGB LED
+
+=> An experiment to understand the working of a RGB LED.
+
+## Components Required
+
+#### -> Arduino Uno
+#### -> USB Cable * 1
+#### -> RGB LED * 1
+#### -> Resistor *3
+#### -> Breadboard jumper wire*5
+
+## Circuit Diagrams
+
+![circuit diagram 6 1](https://user-images.githubusercontent.com/86780435/150277992-330854f9-00e2-4a83-b99e-53a1265bd3d8.png)
+
+
+![circuit diagram 6 2](https://user-images.githubusercontent.com/86780435/150278007-ef4d2a56-7eb2-41b6-953c-51c62ecbb07d.png)
+
+
+
+
+
+## Code
+
+```
+
+int redpin = 11; //select the pin for the red LED
+int bluepin =10; // select the pin for the blue LED
+int greenpin =9;// select the pin for the green LED
+int val;
+void setup() {
+  pinMode(redpin, OUTPUT);
+  pinMode(bluepin, OUTPUT);
+  pinMode(greenpin, OUTPUT);
+  Serial.begin(9600);
+}
+void loop() 
+{
+for(val=255; val>0; val--)
+  {
+   analogWrite(11, val);
+   analogWrite(10, 255-val);
+   analogWrite(9, 128-val);
+   delay(1);
+[4:02 PM, 1/11/2022] Abhishek Krishnan: }
+for(val=0; val<255; val++)
+  {
+   analogWrite(11, val);
+   analogWrite(10, 255-val);
+   analogWrite(9, 128-val);
+   delay(1); 
+  }
+ Serial.println(val, DEC);
+}
+
+
+
+## Output
+
+> The RGB LED blinks.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
