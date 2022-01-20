@@ -352,8 +352,8 @@ for(val=255; val>0; val--)
    analogWrite(11, val);
    analogWrite(10, 255-val);
    analogWrite(9, 128-val);
-   delay(1);
-[4:02 PM, 1/11/2022] Abhishek Krishnan: }
+   delay(1); 
+  }
 for(val=0; val<255; val++)
   {
    analogWrite(11, val);
@@ -363,8 +363,6 @@ for(val=0; val<255; val++)
   }
  Serial.println(val, DEC);
 }
-
-```
 
 ### Output video.
 
