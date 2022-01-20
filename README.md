@@ -18,7 +18,15 @@ Hi folks! I’m Abhishek krishnan U V , Computer Science Engineering student fro
 ##### -> Jumper Wires (Male to Male ) X 2 Nos.
 
 ### Circuit Diagram.
-![Circuit diagram](https://user-images.githubusercontent.com/86780435/146665575-00e87a05-0644-42f9-8d55-d888a1b14409.png)
+
+
+
+
+
+
+![circuit diagram 1](https://user-images.githubusercontent.com/86780435/150275220-c1586270-47d5-49af-940b-d59714ae1a15.png)
+
+
 
 ### The Code.
 
@@ -64,7 +72,13 @@ delay(1000); // wait for a second
 
 ### Circuit Diagram.
 
-![Circuit diagram](https://user-images.githubusercontent.com/86780435/146665599-cee2cbcf-75a3-4d4a-9585-c4a91c787144.png)
+
+
+
+
+![circuit diagram 2](https://user-images.githubusercontent.com/86780435/150275179-195253f6-8f31-4366-9241-978cd1cdfa34.png)
+
+
 
 
 ### The Code.
@@ -108,6 +122,9 @@ digitalWrite(redled, LOW);// turn off red LED
 
 
 ![Output Video](https://user-images.githubusercontent.com/86780435/146666904-195dbecc-7534-407e-91df-aa085b85cb80.mp4)
+
+
+
 ## Experiment 3 : LED Chasing Effect.
 
 => We often see billboards composed of colorful LEDs. They are constantly changing to form various light effects. In this experiment, we compile a program to simulate LED chasing effect. The long lead of LED is the positive side, short lead is negative.
@@ -123,11 +140,12 @@ digitalWrite(redled, LOW);// turn off red LED
 
 ## #Circuit Diagram.
 
-![circuit diagram](https://user-images.githubusercontent.com/86780435/146665615-e7b274db-d50d-4f7c-8dde-94124480e44b.png)
 
+
+
+![circuit diagram 3](https://user-images.githubusercontent.com/86780435/150275118-49183a1e-4486-4b54-87fd-1ca8653c9f28.png)
 
 ### The Code.
-
 ```
 int BASE = 2 ;  // the I/O pin for the first LED
 int NUM = 6;   // number of LEDs
@@ -184,6 +202,18 @@ Successfully made the LED chase.
 
 
 
+![circuit diagram 4 1](https://user-images.githubusercontent.com/86780435/150274912-f3bc9710-5294-431a-9c00-a135d5d2d5d8.png)
+
+
+
+
+![circuit diagram 4 2](https://user-images.githubusercontent.com/86780435/150274951-1a3cba2f-5b93-4e4f-b919-e21be70f4fc8.png)
+
+
+
+
+
+![circuit diagram 4 3](https://user-images.githubusercontent.com/86780435/150274973-98dc4784-7e3b-45aa-85e4-493f6e1f8913.png)
 
 ### Code
 
