@@ -55,6 +55,9 @@ delay(1000); // wait for a second
 ![Output Video](https://user-images.githubusercontent.com/86780435/146666882-c4fa0ac9-71b0-4555-9dce-946b33f04679.mp4)
 
 
+### Result.
+
+=> Successfully blinked the LED in equal intervals of time.
 
 
 ## Experiment 2 : Traffic Light.
@@ -114,15 +117,15 @@ digitalWrite(redled, LOW);// turn off red LED
 
 ```
 
-### Result.
-
-=> Like in the Traffic light scenerio successfully blinked the 3 LED's. The green LED stays on for about 5 second then turnsoff ,Now the yellow LED blinks 3 times with a time interval of 0.5 second , Then the red LED stays on for 5 seconds and goeson
 
 ### Output Video.
 
 
 ![Output Video](https://user-images.githubusercontent.com/86780435/146666904-195dbecc-7534-407e-91df-aa085b85cb80.mp4)
 
+### Result.
+
+=> Like in the Traffic light scenerio successfully blinked the 3 LED's. The green LED stays on for about 5 second then turnsoff ,Now the yellow LED blinks 3 times with a time interval of 0.5 second , Then the red LED stays on for 5 seconds and goeson
 
 
 ## Experiment 3 : LED Chasing Effect.
@@ -171,12 +174,12 @@ void loop()
 }
 
 ```
-### Result.
-Successfully made the LED chase.
+
 
 ### Output Video.
 ![Output Video](https://user-images.githubusercontent.com/86780435/146666923-e93c43e9-1c18-448f-a20e-49e67ed208a0.mp4)
-
+### Result.
+Successfully made the LED chase.
 
 
 
@@ -236,13 +239,17 @@ else
 { digitalWrite(ledpin,HIGH);}
 }
 
+### Output video.
+
+
+
 ### Result.
 Successfully light the LED using a Push Button.
 
 
-### Output
 
-> When the push button is pressed the LED is turned on otherwise it is off.
+
+
 
 
 
