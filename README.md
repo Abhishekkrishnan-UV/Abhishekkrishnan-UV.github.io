@@ -46,10 +46,11 @@ delay(1000); // wait for a second
 ```
 
 
-### Output Video.
+### Output .
 
 
-![Output Video](https://user-images.githubusercontent.com/86780435/146666882-c4fa0ac9-71b0-4555-9dce-946b33f04679.mp4)
+![exp 1](https://user-images.githubusercontent.com/86780435/150972954-eabdb4b7-66a6-41eb-a49d-9a10c8b3148c.png)
+
 
 
 ### Result.
@@ -115,10 +116,16 @@ digitalWrite(redled, LOW);// turn off red LED
 ```
 
 
-### Output Video.
+### Output.
+
+![exp2 1](https://user-images.githubusercontent.com/86780435/150973892-25f26955-d516-4d18-ae86-d76712bb294f.png)
+
+![exp2 2](https://user-images.githubusercontent.com/86780435/150973931-7c1e0dc2-cdb4-4186-b5be-3d37c9c15b21.png)
 
 
-![Output Video](https://user-images.githubusercontent.com/86780435/146666904-195dbecc-7534-407e-91df-aa085b85cb80.mp4)
+
+![exp2 3](https://user-images.githubusercontent.com/86780435/150973944-42e9f374-63cf-4d52-bba5-4394fc2f6a74.png)
+
 
 ### Result.
 
@@ -173,8 +180,17 @@ void loop()
 ```
 
 
-### Output Video.
-![Output Video](https://user-images.githubusercontent.com/86780435/146666923-e93c43e9-1c18-448f-a20e-49e67ed208a0.mp4)
+### Output.
+
+
+
+
+
+![exp3](https://user-images.githubusercontent.com/86780435/150974403-82f7b4f6-163a-474a-8394-fb909d8ed26a.png)
+
+
+
+
 ### Result.
 Successfully made the LED chase.
 
@@ -238,7 +254,12 @@ else
 
 ```
 
-### Output video.
+### Output.
+
+
+
+![exp4](https://user-images.githubusercontent.com/86780435/150974932-3a8aa0ba-4289-4bee-aaf7-a98cb96f7ca8.jpeg)
+
 
 
 
@@ -293,10 +314,11 @@ digitalWrite(buzzer, HIGH); // produce sound
 
 ```
 
-### Output video.
+### Output.
 
 
 
+![exp5](https://user-images.githubusercontent.com/86780435/150975186-e8d221e7-4093-4cf1-b762-943ab2a6a9a9.jpeg)
 
 
 
@@ -367,9 +389,10 @@ for(val=0; val<255; val++)
 }
 
 ```
-### Output video.
+### Output.
 
 
+![exp6](https://user-images.githubusercontent.com/86780435/150975373-179f986c-5374-4c4b-b0d2-7d160ca67c4e.jpeg)
 
 
 
@@ -404,8 +427,10 @@ Successfully blinked the RGB LED.
 
 ### Circuit Diagrams
 
+![circuitdiag 7 1](https://user-images.githubusercontent.com/86780435/150975766-1bba5ed3-acc3-4999-ad20-7680f401b2d3.png)
 
 
+![circuitdiag7 2](https://user-images.githubusercontent.com/86780435/150975781-91b7cd58-8a30-421d-95cf-e47204d38755.png)
 
 
 
@@ -440,8 +465,11 @@ Serial.println(ldrStatus);
 ## Output
 
 
+![exp7](https://user-images.githubusercontent.com/86780435/150976042-2b9673fc-3c36-4782-9957-8a7f96aa4d66.jpeg)
 
 
+### Result.
+Successfully obtained the result.
 
 
 
