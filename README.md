@@ -430,8 +430,8 @@ Successfully blinked the RGB LED.
 ![circuitdiag 7 1](https://user-images.githubusercontent.com/86780435/150975766-1bba5ed3-acc3-4999-ad20-7680f401b2d3.png)
 
 
-![circuitdiag7 2](https://user-images.githubusercontent.com/86780435/150975781-91b7cd58-8a30-421d-95cf-e47204d38755.png)
 
+![circuitdiag7 2](https://user-images.githubusercontent.com/86780435/150976744-80ce7388-7717-443a-add9-ee83928fb735.png)
 
 
 
