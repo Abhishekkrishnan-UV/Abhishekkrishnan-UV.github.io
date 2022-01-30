@@ -1095,7 +1095,69 @@ void loop()
 }
 ```
 
-## Output
+## Output.
+![assign1output1 1](https://user-images.githubusercontent.com/86780435/151702613-6c0e9d86-4f01-462d-8648-7e688113072a.jpeg)
+
+![assign1output1 2](https://user-images.githubusercontent.com/86780435/151702595-d2e3e390-6810-4e10-bca3-b2d357e3d26c.jpeg)
+
+
+### Result.
+Succesfully made the LED lit when the LDR is covered or exposed to darkness.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
