@@ -613,6 +613,8 @@ delay(500);// wait for 0.5 second
 ## Output.
 
 
+![exp9](https://user-images.githubusercontent.com/86780435/151706229-bdedf5b9-5d54-40e8-abb6-46ec790703e4.jpeg)
+![exp9 2](https://user-images.githubusercontent.com/86780435/151706292-d3010680-0c19-4525-a961-f378b362ad9d.png)
 
 
 ### Result.
