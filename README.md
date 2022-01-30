@@ -28,7 +28,7 @@ Hi folks! I’m Abhishek krishnan U V , Computer Science Engineering student fro
 
 
 
-### The Code.
+### Code.
 
 ```
 int ledPin = 10; // define digital pin 10.
@@ -82,7 +82,7 @@ delay(1000); // wait for a second
 
 
 
-### The Code.
+### Code.
 
 ```
 int redled =10; // initialize digital pin 8.
@@ -152,7 +152,7 @@ digitalWrite(redled, LOW);// turn off red LED
 
 ![circuit diagram 3](https://user-images.githubusercontent.com/86780435/150275118-49183a1e-4486-4b54-87fd-1ca8653c9f28.png)
 
-### The Code.
+### Code.
 ```
 int BASE = 2 ;  // the I/O pin for the first LED
 int NUM = 6;   // number of LEDs
