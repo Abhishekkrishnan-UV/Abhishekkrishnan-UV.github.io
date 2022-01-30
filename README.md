@@ -1245,8 +1245,11 @@ void loop() {
 
 ### Output.
 
+!First dice roll [dice1assign](https://user-images.githubusercontent.com/86780435/151705260-2404a099-a96d-43b3-abb0-5f2460625ba6.jpeg)
 
+![dice2assign](https://user-images.githubusercontent.com/86780435/151705262-6c4d0e8d-585e-4fc6-9240-49aed2bfaa3f.jpeg)
 
+![dice3assign](https://user-images.githubusercontent.com/86780435/151705266-f86ac21f-62ed-467f-97e3-6c6fd7b7f5bc.jpeg)
 
 
 
