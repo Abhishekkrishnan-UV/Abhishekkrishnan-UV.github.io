@@ -324,7 +324,7 @@ digitalWrite(buzzer, HIGH); // produce sound
 
 
 ### Result.
-Successfully made the Buzzer makes beep sound.
+Successfully made the Buzzer beep.
 
 
 
