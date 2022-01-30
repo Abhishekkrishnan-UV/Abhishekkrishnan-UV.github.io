@@ -264,7 +264,7 @@ else
 
 
 ### Result.
-Successfully light the LED using a Push Button.
+Successfully lit the LED using a Push Button.
 
 
 
