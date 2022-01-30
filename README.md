@@ -1041,7 +1041,61 @@ Successfully blinked numbers from 0 to 9.
 
 
 
+## Assignment 1 : Automatic Night Lamp model using LDR and LED.
 
+=> An experiment to create automatic night lamp model using LDR and LED.
+
+### Components Required
+
+ #### -> Arduino Uno Board
+ #### ->  Breadboard
+ #### ->  LDR
+ #### ->  LED
+ #### ->  Resistor 1k
+ #### ->  Resistor 10k
+ #### ->  Male to Male Jumpers
+ #### -> USB cable*1
+
+### Circuit Diagram.
+![assign 1 circuit diag1](https://user-images.githubusercontent.com/86780435/151685963-63d96039-f9c4-4f50-9a91-0faedc68a354.jpeg)
+
+
+### Code
+
+```
+
+
+const int LED=2;            // LED connect to Digital Pin 
+const int LDRSensor= A0;    //Sensor pin connects to analog pin A0
+
+int state;                  //declaring variable to store the reading 
+int threshold=600;          //threshold voltage declared 
+
+void setup() 
+{
+  pinMode (LED, OUTPUT);   
+  Serial.begin(9600); 
+}
+
+void loop()
+{
+  state= analogRead(LDRSensor); //sensor reading value stored in state variable
+  if (state < threshold)
+    {
+      digitalWrite(LED, HIGH); //if the light is below the threshold value, the LED will turns on
+      Serial.println(state);
+      delay(2000);
+    }
+  else
+    {
+      digitalWrite(LED, LOW); //otherwise, the LED is off
+      Serial.println(state);
+      delay(1000);
+    }
+}
+```
+
+## Output
 
 
 
