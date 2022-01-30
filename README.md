@@ -492,8 +492,544 @@ Successfully obtained the result.
 
 
 
+## Experiment 8 : Flame Sensor
+
+=> An experiment to understand the working of an Flame sensor.
 
 
+
+### Components Required
+
+#### -> Arduino Uno Board*1
+#### -> Flame Sensor *1
+#### -> Buzzer *1
+#### -> 10K Resistor *1
+#### -> Breadboard Jumper Wire*6
+#### -> USB cable*1
+
+### Circuit Diagrams
+
+
+![circuit diagram 8 1](https://user-images.githubusercontent.com/86780435/151684550-36a6061e-c25d-4f8b-b269-e2f1b2bf1eba.png)
+
+
+![circuit diagram 8 2](https://user-images.githubusercontent.com/86780435/151684552-0ae24c40-1c56-4e62-8d48-8c4f0e9bbe42.png)
+
+
+
+
+
+   ## Code
+
+```
+
+int flame=0;// select analog pin 0 for the sensor
+int Beep=9;// select digital pin 9 for the buzzer
+int val=0;// initialize variable
+ void setup() 
+{
+  pinMode(Beep,OUTPUT);// set LED pin as “output”
+ pinMode(flame,INPUT);// set buzzer pin as “input”
+ Serial.begin(9600);// set baud rate at “9600”
+ } 
+void loop() 
+{ 
+  val=analogRead(flame);// read the analog value of the sensor 
+  Serial.println(val);// output and display the analog value
+  if(val>=600)// when the analog value is larger than 600, the buzzer will buzz
+  {  
+   digitalWrite(Beep,HIGH); 
+   }else 
+   {  
+     digitalWrite(Beep,LOW); 
+    }
+   delay(500); 
+}
+```
+
+### Output.
+
+![exp8](https://user-images.githubusercontent.com/86780435/151684779-4d360477-563f-4db5-b22d-fc5954868fd3.jpeg)
+
+
+
+
+### Result.
+Successfully sensed flame with the experiment.
+
+
+
+
+## Experiment 9 : LM35 Temperature Sensor
+
+=> An experiment to understand the working of an LM35 Temperature Sensor.
+
+### LM35 Temperature Sensor
+LM35 is a widely used temperature sensor with many different package types. At room temperature,
+it can achieve the accuracy of ±1/4°C without additional calibration processing.
+
+LM35 temperature sensor can produce different voltage by different temperature
+When temperature is 0 ℃, it outputs 0V; if increasing 1 ℃, the output voltage will increase 10 mv.
+
+
+
+
+### Components Required.
+
+#### -> Arduino Uno  Board*1
+#### -> LM35*1
+#### -> Breadboard*1
+#### -> Breadboard Jumper Wire*5
+#### -> USB cable*
+
+## Circuit Diagrams.
+
+![circuit diagram 9 1](https://user-images.githubusercontent.com/86780435/151684945-330d9193-af59-419b-bcfa-12ddf2024b0d.png)
+
+![circuit diagram 9 2](https://user-images.githubusercontent.com/86780435/151684949-3dda1394-2fb5-466b-ae53-e48e5415f7a6.png)
+
+
+## Code
+
+```
+int potPin = 0; // initialize analog pin 0 for LM35 temperature sensor
+void setup()
+{
+Serial.begin(9600);// set baud rate at”9600”
+}
+void loop()
+{
+int val;// define variable
+int dat;// define variable
+val=analogRead(0);// read the analog value of the sensor and assign it to val
+dat=(125*val)>>8;// temperature calculation formula
+Serial.print("Tep");// output and display characters beginning with Tep
+Serial.print(dat);// output and display value of dat
+Serial.println("C");// display “C” characters
+delay(500);// wait for 0.5 second
+}
+```
+
+## Output.
+
+
+
+
+### Result.
+Successfully obtained temperature using LM35.
+
+
+
+
+
+## Experiment 10:IR Remote Control Using TSOP
+
+=> An experiment to understand the working of IR Remote Control using TSOP.
+
+### Components Required.
+#### -> Arduino Uno Board*1
+#### -> Infrared Remote Controller(You can use TV Remote or any other remote) *1
+#### -> Infrared Receiver *1
+#### -> LED *6
+#### -> 220ΩResistor *6
+#### -> Breadboard Wire *11
+#### -> USB cable*1
+
+
+### Circuit Diagrams.
+
+![circuit diagram 10 1](https://user-images.githubusercontent.com/86780435/151685062-e63425d0-13ae-4591-83e0-bd984d123fe8.png)
+
+![circuit diagram 10 2](https://user-images.githubusercontent.com/86780435/151685063-e2e68b0d-cc57-4dac-a3a9-21c9a547a195.png)
+
+
+### Code.
+
+```
+
+#include <IRremote.h>
+int RECV_PIN = 11;
+int LED1 = 2;
+int LED2 = 3;
+int LED3 = 4;
+int LED4 = 5;
+int LED5 = 6;
+int LED6 = 7;
+long on1  = 0x00FF6897;
+long off1 = 0x00FF9867;
+long on2 = 0x00FFB04F;
+long off2 = 0x00FF30CF;
+long on3 = 0x00FF18E7;
+long off3 = 0x00FF7A85;
+long on4 = 0x00FF10EF;
+long off4 = 0x00FF38C7;
+long on5 = 0x00FF5AA5;
+long off5 = 0x00FF42BD;
+long on6 = 0x00FF4AB5;
+long off6 = 0x00FF52AD;
+IRrecv irrecv(RECV_PIN);
+decode_results results;
+// Dumps out the decode_results structure.
+// Call this after IRrecv::decode()
+// void * to work around compiler issue
+//void dump(void *v) {
+//  decode_results *results = (decode_results *)v
+void dump(decode_results *results) {
+  int count = results->rawlen;
+  if (results->decode_type == UNKNOWN) 
+    {
+     Serial.println("Could not decode message");
+    } 
+  else 
+   {
+    if (results->decode_type == NEC) 
+      {
+       Serial.print("Decoded NEC: ");
+      } 
+    else if (results->decode_type == SONY) 
+      {
+       Serial.print("Decoded SONY: ");
+      } 
+    else if (results->decode_type == RC5) 
+      {
+       Serial.print("Decoded RC5: ");
+      } 
+    else if (results->decode_type == RC6) 
+      {
+       Serial.print("Decoded RC6: ");
+      }
+     Serial.print(results->value, HEX);
+     Serial.print(" (");
+     Serial.print(results->bits, DEC);
+     Serial.println(" bits)");
+   }
+     Serial.print("Raw (");
+     Serial.print(count, DEC);
+     Serial.print("): ");
+ for (int i = 0; i < count; i++) 
+     {
+      if ((i % 2) == 1) {
+      Serial.print(results->rawbuf[i]*USECPERTICK, DEC);
+     } 
+    else  
+     {
+      Serial.print(-(int)results->rawbuf[i]*USECPERTICK, DEC);
+     }
+    Serial.print(" ");
+     }
+      Serial.println("");
+     }
+void setup()
+ {
+  pinMode(RECV_PIN, INPUT);   
+  pinMode(LED1, OUTPUT);
+  pinMode(LED2, OUTPUT);
+  pinMode(LED3, OUTPUT);
+  pinMode(LED4, OUTPUT);
+  pinMode(LED5, OUTPUT);
+  pinMode(LED6, OUTPUT);  
+  pinMode(13, OUTPUT);
+  Serial.begin(9600);
+   irrecv.enableIRIn(); // Start the receiver
+ }
+int on = 0;
+unsigned long last = millis();
+void loop() 
+{
+  if (irrecv.decode(&results)) 
+   {
+    // If it's been at least 1/4 second since the last
+    // IR received, toggle the relay
+    if (millis() - last > 250) 
+      {
+       on = !on;
+//       digitalWrite(8, on ? HIGH : LOW);
+       digitalWrite(13, on ? HIGH : LOW);
+       dump(&results);
+      }
+    if (results.value == on1 )
+       digitalWrite(LED1, HIGH);
+    if (results.value == off1 )
+       digitalWrite(LED1, LOW); 
+    if (results.value == on2 )
+       digitalWrite(LED2, HIGH);
+    if (results.value == off2 )
+       digitalWrite(LED2, LOW); 
+    if (results.value == on3 )
+       digitalWrite(LED3, HIGH);
+    if (results.value == off3 )
+       digitalWrite(LED3, LOW);
+    if (results.value == on4 )
+       digitalWrite(LED4, HIGH);
+    if (results.value == off4 )
+       digitalWrite(LED4, LOW); 
+    if (results.value == on5 )
+       digitalWrite(LED5, HIGH);
+    if (results.value == off5 )
+       digitalWrite(LED5, LOW); 
+    if (results.value == on6 )
+       digitalWrite(LED6, HIGH);
+    if (results.value == off6 )
+       digitalWrite(LED6, LOW);        
+    last = millis();      
+irrecv.resume(); // Receive the next value
+  }
+}
+
+```
+
+### Output.
+
+
+![exp10](https://user-images.githubusercontent.com/86780435/151685127-ed3ea1ac-c16c-4c8a-ac81-6e00eb1ac1f2.jpeg)
+
+
+
+
+### Result.
+Successfully obtained the result.
+
+
+
+
+## Experiment 11 :Potentiometer analog Value Reading.
+
+=> An experiment to understand the working of Potentiometer.
+
+### Components Required
+
+#### -> Arduino Uno Board*1]
+
+#### -> 10K Potentiometer *1
+
+#### -> Breadboard*1
+
+#### -> Breadboard Jumper Wire*3
+
+#### -> USB cable*1
+
+
+
+### Circuit Diagrams.
+![circuit diagram 11 1](https://user-images.githubusercontent.com/86780435/151685199-0eba6d17-5c7c-45af-8698-54eb034d03c9.png)
+
+
+![circuit digram 11 2](https://user-images.githubusercontent.com/86780435/151685200-2e907c1b-8067-474d-8e35-388e35e33efe.png)
+
+
+
+
+### Code.
+
+```
+
+int potpin=0;// initialize analog pin 0
+int ledpin=13;// initialize digital pin 13
+int val=0;// define val, assign initial value 0
+void setup()
+{
+pinMode(ledpin,OUTPUT);// set digital pin as “output”
+Serial.begin(9600);// set baud rate at 9600
+}
+void loop()
+{
+digitalWrite(ledpin,HIGH);// turn on the LED on pin 13
+delay(50);// wait for 0.05 second
+digitalWrite(ledpin,LOW);// turn off the LED on pin 13
+delay(50);// wait for 0.05 second
+val=analogRead(potpin);// read the analog value of analog pin 0, and assign it to val 
+Serial.println(val);// display val’s value
+}
+```
+
+### Output
+
+
+![exp 11 2](https://user-images.githubusercontent.com/86780435/151685243-4e6d8997-68d8-417d-a6fd-b59f867c9956.jpeg)
+
+
+
+![exp11 1](https://user-images.githubusercontent.com/86780435/151685254-be37f6f6-c5bf-4d38-b95e-473f15c78361.jpeg)
+
+### Result.
+Successfully obtained the analog value of potentiometer.
+
+
+## Experiment 12 : 7 Segment Display.
+        
+=> An experiment to understand the working of 7 Segment Display.
+
+### Components Required.
+
+#### -> Arduino Uno Board*1
+#### -> 1-digit LED Segment Display*1
+#### -> 220Ω Resistor*8
+#### -> Breadboard*1
+#### -> Breadboard Jumper Wires *several
+#### -> USB cable*1
+
+
+### Circuit Diagrams.
+
+![circuit diagram 12 1](https://user-images.githubusercontent.com/86780435/151685507-fb81e2eb-7b51-4d1e-9b96-5b65501ba86b.png)
+![circuit diagram 12 2](https://user-images.githubusercontent.com/86780435/151685514-4b45b6c8-4538-43f2-a940-80da055083a3.png)
+
+
+
+
+### Code.
+
+```
+
+int a=7;// set digital pin 7 for segment a
+int b=6;// set digital pin 6 for segment b
+int c=5;// set digital pin 5 for segment c
+int d=10;// set digital pin 10 for segment d
+int e=11;// set digital pin 11 for segment e
+int f=8;// set digital pin 8 for segment f
+int g=9;// set digital pin 9 for segment g
+int dp=4;// set digital pin 4 for segment dp
+void digital_0(void) // display number 5
+{
+unsigned char j;
+digitalWrite(a,HIGH);
+digitalWrite(b,HIGH);
+digitalWrite(c,HIGH);
+digitalWrite(d,HIGH);
+digitalWrite(e,HIGH);
+digitalWrite(f,HIGH);
+digitalWrite(g,LOW);
+digitalWrite(dp,LOW);
+}
+void digital_1(void) // display number 1
+{
+unsigned char j;
+digitalWrite(c,HIGH);// set level as “high” for pin 5, turn on segment c
+digitalWrite(b,HIGH);// turn on segment b
+for(j=7;j<=11;j++)// turn off other segments
+digitalWrite(j,LOW);
+digitalWrite(dp,LOW);// turn off segment dp
+}
+void digital_2(void) // display number 2
+{
+unsigned char j;
+digitalWrite(b,HIGH);
+digitalWrite(a,HIGH);
+for(j=9;j<=11;j++)
+digitalWrite(j,HIGH);
+digitalWrite(dp,LOW);
+digitalWrite(c,LOW);
+digitalWrite(f,LOW);
+}
+void digital_3(void) // display number 3
+{digitalWrite(g,HIGH);
+digitalWrite(a,HIGH);
+digitalWrite(b,HIGH);
+digitalWrite(c,HIGH);
+digitalWrite(d,HIGH);
+digitalWrite(dp,LOW);
+digitalWrite(f,LOW);
+digitalWrite(e,LOW);
+}
+void digital_4(void) // display number 4
+{digitalWrite(c,HIGH);
+digitalWrite(b,HIGH);
+digitalWrite(f,HIGH);
+digitalWrite(g,HIGH);
+digitalWrite(dp,LOW);
+digitalWrite(a,LOW);
+digitalWrite(e,LOW);
+digitalWrite(d,LOW);
+}
+void digital_5(void) // display number 5
+{
+unsigned char j;
+digitalWrite(a,HIGH);
+digitalWrite(b, LOW);
+digitalWrite(c,HIGH);
+digitalWrite(d,HIGH);
+digitalWrite(e, LOW);
+digitalWrite(f,HIGH);
+digitalWrite(g,HIGH);
+digitalWrite(dp,LOW);
+}
+void digital_6(void) // display number 6
+{
+unsigned char j;
+for(j=7;j<=11;j++)
+digitalWrite(j,HIGH);
+digitalWrite(c,HIGH);
+digitalWrite(dp,LOW);
+digitalWrite(b,LOW);
+}
+void digital_7(void) // display number 7
+{
+unsigned char j;
+for(j=5;j<=7;j++)
+digitalWrite(j,HIGH);
+digitalWrite(dp,LOW);
+for(j=8;j<=11;j++)
+digitalWrite(j,LOW);
+}
+void digital_8(void) // display number 8
+{
+unsigned char j;
+for(j=5;j<=11;j++)
+digitalWrite(j,HIGH);
+digitalWrite(dp,LOW);
+}
+void digital_9(void) // display number 5
+{
+unsigned char j;
+digitalWrite(a,HIGH);
+digitalWrite(b,HIGH);
+digitalWrite(c,HIGH);
+digitalWrite(d,HIGH);
+digitalWrite(e, LOW);
+digitalWrite(f,HIGH);
+digitalWrite(g,HIGH);
+digitalWrite(dp,LOW);
+}
+void setup()
+{
+int i;// set variable
+for(i=4;i<=11;i++)
+pinMode(i,OUTPUT);// set pin 4-11as “output”
+}
+void loop()
+{
+while(1)
+{
+digital_0();// display number 0
+delay(1000);// wait for 1s
+digital_1();// display number 1
+delay(1000);// wait for 1s
+digital_2();// display number 2
+delay(1000); // wait for 1s
+digital_3();// display number 3
+delay(1000); // wait for 1s
+digital_4();// display number 4
+delay(1000); // wait for 1s
+digital_5();// display number 5
+delay(1000); // wait for 1s
+digital_6();// display number 6
+delay(1000); // wait for 1s
+digital_7();// display number 7
+delay(1000); // wait for 1s
+digital_8();// display number 8
+delay(1000); // wait for 1s
+digital_9();// display number 9
+delay(1000); // wait for 1s
+}}
+```
+
+### Output.
+![exp12](https://user-images.githubusercontent.com/86780435/151685619-d882f895-f687-40d2-8bbd-384adbb01427.jpeg)
+
+
+
+### Result.
+Successfully blinked numbers from 0 to 9.
 
 
 
