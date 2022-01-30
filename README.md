@@ -469,7 +469,7 @@ Serial.println(ldrStatus);
 
 
 ### Result.
-Successfully obtained the result.
+Successfully lit the LED accordingly to light exposure on LDR.
 
 
 
